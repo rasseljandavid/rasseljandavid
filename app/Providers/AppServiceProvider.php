@@ -23,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        config([
+            'config/laravel-newsletter.php', // add your new config file here!
+        ]);
     }
 }

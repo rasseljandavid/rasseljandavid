@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', function () { return view('pages.home'); });
+Route::get('/projects', function () { return view('pages.projects'); });
+Route::get('/services', function () { return view('pages.services'); });
+Route::get('/contact', function () { return view('pages.contact'); });
+Route::get('/about', function () { return view('pages.about'); });
+
+
+Auth::routes();
+
+Route::post('/subscribe', 'HomeController@subscribe');
